@@ -1,5 +1,5 @@
 #
-# system.prop for g150n0
+# system.prop for novel3gskt
 #
 
 ro.secure=0
@@ -7,7 +7,7 @@ ro.allow.mock.location=1
 ro.debuggable=1
 persist.sys.usb.config=adb
 
-ro.product.model=SM-G150N0
+ro.product.model=SM-G155S
 ro.product.brand=samsung
-ro.product.name=g150n0
-ro.product.device=g150n0
+ro.product.name=novel3gskt
+ro.product.device=novel3gskt

@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := g150n0
+TARGET_BOOTLOADER_BOARD_NAME := novel3gskt
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos3475
@@ -25,7 +25,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
 # BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE :=  0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --dt device/samsung/g150n0/dt.img --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := --dt device/samsung/novel3gskt/dt.img --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
@@ -38,7 +38,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # TWRP
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 
 # Use our own init.rc without setting up functionfs
@@ -46,11 +45,11 @@ TARGET_RECOVERY_DEVICE_MODULES += init.recovery.usb.rc init.recovery.universal34
 
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
+# TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
 
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true

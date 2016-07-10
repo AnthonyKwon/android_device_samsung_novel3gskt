@@ -1,3 +1,3 @@
-ifneq ($(filter g150n0,$(TARGET_DEVICE)),)
+ifneq ($(filter novel3gskt,$(TARGET_DEVICE)),)
     include $(all-subdir-makefiles)
 endif
