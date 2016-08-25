@@ -1,3 +1,10 @@
 # fstab for OmniROM
 # fstab for TWRP was replaced to twrp.fstab
-# http://devanix.tistory.com/240
+# <src>                                                 <mnt_point>  <type>  <mnt_flags and options> <fs_mgr_flags>
+/dev/block/platform/13540000.dwmmc0/by-name/BOOT        /boot        ext4    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/CACHE       /cache       ext4    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/EFS         /efs         ext4    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/HIDDEN      /preload     ext4    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/RECOVERY    /recovery    emmc    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM      /system      ext4    defaults                defaults
+/dev/block/platform/13540000.dwmmc0/by-name/USERDATA    /data        ext4    defaults                defaults

@@ -1,3 +1,4 @@
+# fstab for TWRP
 /boot          emmc      /dev/block/platform/13540000.dwmmc0/by-name/BOOT
 /cache         ext4      /dev/block/platform/13540000.dwmmc0/by-name/CACHE
 /data          ext4      /dev/block/platform/13540000.dwmmc0/by-name/USERDATA      length=-16384

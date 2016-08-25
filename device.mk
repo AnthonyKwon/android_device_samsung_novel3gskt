@@ -6,7 +6,8 @@ LOCAL_PATH := device/samsung/novel3gskt
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/selinux/file_contexts:recovery/root/prebuilt_file_contexts \
-    $(LOCAL_PATH)/recovery.fstab:recovery/root/etc/recovery.fstab
+    $(LOCAL_PATH)/recovery.fstab:recovery/root/etc/recovery.fstab \
+    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 $(call inherit-product, build/target/product/full.mk)
 
