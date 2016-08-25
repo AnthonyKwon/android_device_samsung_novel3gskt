@@ -61,3 +61,6 @@ TW_INCLUDE_L_CRYPTO := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 TW_EXCLUDE_SUPERSU := true
+
+# Use twrp.fstab for TWRP instead of recovery.fstab
+PRODUCT_COPY_FILES += device/oem/codename/twrp.fstab:recovery/root/etc/twrp.fstab
