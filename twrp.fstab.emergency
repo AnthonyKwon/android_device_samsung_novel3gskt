@@ -1,0 +1,25 @@
+# fstab for TWRP
+/boot          ext4      /dev/block/platform/13540000.dwmmc0/by-name/BOOT
+/bota0         emmc      /dev/block/platform/13540000.dwmmc0/by-name/BOTA0
+/bota1         emmc      /dev/block/platform/13540000.dwmmc0/by-name/BOTA1
+/cache         ext4      /dev/block/platform/13540000.dwmmc0/by-name/CACHE
+/carrier       emmc      /dev/block/platform/13540000.dwmmc0/by-name/CARRIER
+/cdma-radio    emmc      /dev/block/platform/13540000.dwmmc0/by-name/CDMA-RADIO
+/cpefs         emmc      /dev/block/platform/13540000.dwmmc0/by-name/CPEFS
+/efs           ext4      /dev/block/platform/13540000.dwmmc0/by-name/EFS           flags=backup=1
+/preload       ext4      /dev/block/platform/13540000.dwmmc0/by-name/HIDDEN
+/m9kefs1       emmc      /dev/block/platform/13540000.dwmmc0/by-name/m9kefs1
+/m9kefs2       emmc      /dev/block/platform/13540000.dwmmc0/by-name/m9kefs2
+/m9kefs3       emmc	     /dev/block/platform/13540000.dwmmc0/by-name/m9kefs3
+/ota           emmc      /dev/block/platform/13540000.dwmmc0/by-name/OTA
+/param         emmc      /dev/block/platform/13540000.dwmmc0/by-name/PARAM
+/persdata      emmc      /dev/block/platform/13540000.dwmmc0/by-name/PERSDATA
+/persistant    emmc      /dev/block/platform/13540000.dwmmc0/by-name/PERSISTANT
+/radio         emmc      /dev/block/platform/13540000.dwmmc0/by-name/RADIO
+/recovery      emmc      /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
+/reserved2     emmc      /dev/block/platform/13540000.dwmmc0/by-name/RESERVED2
+/system        ext4      /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM
+/tdata         emmc      /dev/block/platform/13540000.dwmmc0/by-name/TDATA
+/tombstone     emmc      /dev/block/platform/13540000.dwmmc0/by-name/TOMBSTONE
+/data          ext4      /dev/block/platform/13540000.dwmmc0/by-name/USERDATA
+/external_sd   vfat      /dev/block/mmcblk1p1 storage;wipeingui;removable
