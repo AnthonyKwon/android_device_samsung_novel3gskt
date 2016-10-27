@@ -34,15 +34,14 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5150605312
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+TARGET_RECOVERY_INITRC := device/samsung/novel3gskt/init.rc
+
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # TWRP
 TW_THEME := portrait_hdpi
-
-# Use our own init.rc without setting up functionfs
-TARGET_RECOVERY_DEVICE_MODULES += init.recovery.usb.rc init.recovery.universal3475.rc
 
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
