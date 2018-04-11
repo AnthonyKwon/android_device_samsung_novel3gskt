@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2014, The CyanogenMod Project <http://www.cyanogenmod.org>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter novel3gskt,$(TARGET_DEVICE)),)
-    include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+ifeq ($(TARGET_POWERHAL_VARIANT),exynos3)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := power.exynos3
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SRC_FILES := power.c
+LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+endif # TARGET_POWERHAL_VARIANT == exynos3
+
