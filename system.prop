@@ -1,3 +1,9 @@
 #
 # system.prop for novel3gskt
 #
+
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/ttyS0
+ro.telephony.default_network=9
+telephony.lteOnCdmaDevice=0
+ro.sf.lcd_density=240
