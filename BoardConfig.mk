@@ -7,31 +7,21 @@ TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := cortex-a7
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-# Audio
-BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universial3475
 TARGET_NO_BOOTLOADER := true
 
-# Camera
-USE_CAMERA_STUB := true
-
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
+BOARD_VENDOR := samsung
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_VENDOR := samsung
-TARGET_PREBUILT_DTB := $(LOCAL_PATH)/dt.img
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 
-TARGET_KERNEL_CONFIG := lineage_novellte_defconfig
+TARGET_KERNEL_CONFIG := cm-novellte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
+TARGET_PREBUILT_DTB := $(LOCAL_PATH)/dt.img
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos3475
@@ -45,43 +35,44 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5150605312
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
 # Graphics
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := $(LOCAL_PATH)/egl/egl.cfg
 
 # GUI
 BOARD_EGL_NEEDS_HANDLE_VALUE := true
 
+# Camera
+USE_CAMERA_STUB := true
+
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(LOCAL_PATH)
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal3475
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.universal3475
 BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_OTA_ASSERT_DEVICE := novel3gskt
 
-# Wifi
-BOARD_WLAN_DEVICE                := bcmdhd
-BOARD_HAVE_SAMSUNG_WIFI          := true
-BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_${BOARD_WLAN_DEVICE}
-BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_${BOARD_WLAN_DEVICE}
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
-WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA          := "/system/etc/wifi/bcmdhd_sta.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/etc/wifi/bcmdhd_p2p.bin"
-
-TARGET_RECOVERY_INITRC := device/samsung/novel3gskt/init.rc
-BOARD_HAS_NO_SELECT_BUTTON := true
-
-# TWRP
+# Build twrp for recovery instead if build variant is userdebug
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-TW_NO_SCREEN_BLANK := true
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_MAX_BRIGHTNESS := 255
+TW_CUSTOM_POWER_BUTTON := 116
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-TW_THEME := portrait_mdpi
+TW_INCLUDE_FB2PNG := true
+TW_INCLUDE_L_CRYPTO := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_SUPERSU := true
+endif
+
+# etc.
+BOARD_HAS_NO_SELECT_BUTTON := true
 
 # inherit from the proprietary version
--include vendor/samsung/noveltekx/BoardConfigVendor.mk
+-include vendor/samsung/novel3gskt/BoardConfigVendor.mk
