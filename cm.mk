@@ -13,7 +13,7 @@ PRODUCT_MANUFACTURER := samsung
 
 # Set build fingerprint / ID / Product Name etc.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-		PRODUCT_NAME=novel3gskt \
-		TARGET_DEVICE=novel3gskt \
-		BUILD_FINGERPRINT="samsung/novel3gskt/novel3gskt:5.1.1/LMY47X/G155SKSU1APE3:user/release-keys" \
-		PRIVATE_BUILD_DESC="novel3gskt-user 5.1.1 LMY47X G155SKSU1APE3 release-keys"
+    PRODUCT_NAME=novel3gskt \
+    TARGET_DEVICE=novel3gskt \
+    BUILD_FINGERPRINT="samsung/novel3gskt/novel3gskt:5.1.1/LMY47X/G155SKSU1APE3:user/release-keys" \
+    PRIVATE_BUILD_DESC="novel3gskt-user 5.1.1 LMY47X G155SKSU1APE3 release-keys"

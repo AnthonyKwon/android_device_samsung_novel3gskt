@@ -1,4 +1,4 @@
-$(call inherit-product-if-exists, vendor/samsung/novel3gskt/novel3gskt-vendor.mk)
+$(call inherit-product, vendor/samsung/novel3gskt/novel3gskt-vendor.mk)
 
 LOCAL_PATH := device/samsung/novel3gskt
 
