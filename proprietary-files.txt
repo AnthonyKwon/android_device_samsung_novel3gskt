@@ -43,9 +43,6 @@ vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_EARPIECE.txt
 vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_SPEAKER.txt
 vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
 vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt
-vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_SPEAKER.txt
-vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADPHONE.txt
-vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADSET.txt
 vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
 vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_EARPIECE.txt
 vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_SPEAKER.txt
@@ -61,6 +58,16 @@ vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_EARPIECE.txt
 vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_SPEAKER.txt
 vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
 vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt
+vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
+vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_EARPIECE.txt
+vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_SPEAKER.txt
+vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
+vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt
+vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
+vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_EARPIECE.txt
+vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_SPEAKER.txt
+vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
+vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt
 vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
 vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_EARPIECE.txt
 vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_SPEAKER.txt
@@ -107,7 +114,8 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVStreamControlAPI_L3.so
 
 lib/egl/libGLES_android.so
-]lib/egl/gpr_list.cfg
+
+vendor/lib/egl/gpr_list.cfg
 
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
@@ -116,11 +124,9 @@ vendor/lib/mediadrm/libwvdrmengine.so
 etc/wifi/bcmdhd_apsta.bin
 etc/wifi/bcmdhd_mfg.bin
 etc/wifi/bcmdhd_sta.bin
-etc/wifi/etc/wifi/cred.conf
+etc/wifi/cred.conf
 etc/wifi/nvram_mfg.txt
 etc/wifi/nvram_net.txt
-
-etc/plmn_se13.bin
 
 ## BIN
 bin/mfgloader
