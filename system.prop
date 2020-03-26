@@ -6,16 +6,8 @@ rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/ttyS0
 
 # set lcd density
-ro.sf.lcd_density=240
+#ro.sf.lcd_density=240
 
 ro.arch=exynos3475
 ro.kernel.qemu=0
 ro.kernel.qemu.gles=1
-persist.hdmi.hdcp_enabled=1
-
-# SAMP_SPCM
-sys.config.samp_spcm_enable=true
-sys.config.spcm_db_enable=true
-sys.config.spcm_db_launcher=true
-sys.config.spcm_preload_enable=true
-
