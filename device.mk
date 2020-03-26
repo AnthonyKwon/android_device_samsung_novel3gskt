@@ -35,14 +35,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.render_dirty_regions=false \
     ro.opengles.version=196608
 
-# Build twrp for recovery instead if build variant is userdebug
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+# Build twrp for recovery instead if build variant is not user
+ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 $(call inherit-product, build/target/product/full.mk)

@@ -35,11 +35,11 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/novel3gskt/mkbootimg.mk
 
 TARGET_KERNEL_CONFIG := exynos3475-novellte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
-TARGET_PREBUILT_DTB := $(LOCAL_PATH)/dt.img
+TARGET_PREBUILT_DTB := device/samsung/novel3gskt/dt.img
 
 # Audio
 BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
@@ -47,7 +47,7 @@ BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/novel3gskt/bluetooth
 
 # Camera
 USE_CAMERA_STUB := true
@@ -67,7 +67,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS := device/samsung/novel3gskt/sepolicy
 
 # Graphics
 USE_OPENGL_RENDERER := true
@@ -80,7 +80,7 @@ USE_CAMERA_STUB := true
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(LOCAL_PATH)
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.universal3475
+TARGET_RECOVERY_FSTAB := device/samsung/novel3gskt/rootdir/fstab.universal3475
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_OTA_ASSERT_DEVICE := novel3gskt
 
