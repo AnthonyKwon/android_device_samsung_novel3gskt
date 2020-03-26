@@ -37,7 +37,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 
-TARGET_KERNEL_CONFIG := cm-novellte_defconfig
+TARGET_KERNEL_CONFIG := exynos3475-novellte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
 TARGET_PREBUILT_DTB := $(LOCAL_PATH)/dt.img
 
@@ -84,8 +84,8 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.universal3475
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_OTA_ASSERT_DEVICE := novel3gskt
 
-# Build twrp for recovery instead if build variant is userdebug
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+# Build twrp for recovery instead if build variant is not user
+ifneq ($(TARGET_BUILD_VARIANT),user)
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
@@ -116,4 +116,4 @@ WIFI_DRIVER_FW_PATH_P2P := "/system/etc/wifi/bcmdhd_p2p.bin"
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # inherit from the proprietary version
--include vendor/samsung/novel3gskt/BoardConfigVendor.mk
+-include vendor/samsung/novel/BoardConfigVendor.mk

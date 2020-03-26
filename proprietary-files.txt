@@ -107,9 +107,6 @@ vendor/etc/nxp/LVVEFS_Tx_Configuration.txt
 
 vendor/lib/liblvverx_3.27.02.so
 vendor/lib/liblvvetx_3.27.02.so
-vendor/lib/libOpenCL.so
-vendor/lib/libOpenCL.so.1
-vendor/lib/libOpenCL.so.1.1
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVStreamControlAPI_L3.so
 
