@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifeq (novel3gskt,$(TARGET_DEVICE))
-
 LOCAL_PATH := $(call my-dir)
+
+ifeq (novel3gskt,$(TARGET_DEVICE))
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
