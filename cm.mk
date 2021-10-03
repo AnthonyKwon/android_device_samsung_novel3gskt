@@ -2,6 +2,7 @@
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
+$(call inherit-product, device/samsung/novel-common/common.mk)
 $(call inherit-product, device/samsung/novel3gskt/full_novel3gskt.mk)
 
 # Device identifier. This must come after all inclusions
